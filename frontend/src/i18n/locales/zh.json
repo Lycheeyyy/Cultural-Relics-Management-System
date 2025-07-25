@@ -1,0 +1,26 @@
+{
+  "message": {
+    "home":"首页",
+
+    "addUser":"添加用户",
+    "manageUser":"用户管理",
+    "UserList":"用户列表",
+
+    "manageAdmin":"管理员管理",
+    "AdminList":"管理员列表",
+    "addAdmin":"添加管理员",
+
+    "manageitem":"文物藏品管理",
+    "ItemList":"文物藏品列表",
+    "addItem":"添加文物",
+
+    "manageCategory":"文物分类管理",
+    "CategoryList":"添加文物分类",
+    "addCategory":"文物分类列表",
+
+    "manageBorrow":"外借藏品管理",
+    "BorrowList":"外借藏品列表",
+    "addBorrow":"外借文物"
+
+  }
+}

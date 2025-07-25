@@ -1,0 +1,25 @@
+{
+  "message": {
+    "home":"HomeView",
+
+    "addUser":"addUser",
+    "manageUser":"manageUser",
+    "UserList":"UserList",
+
+    "manageAdmin":"manageAdmin",
+    "AdminList":"AdminList",
+    "addAdmin":"addAdmin",
+
+    "manageitem":"manageitem",
+    "ItemList":"ItemList",
+    "addItem":"addItem",
+
+    "manageCategory":"manageCategory",
+    "CategoryList":"CategoryList",
+    "addCategory":"addCategory",
+
+    "manageBorrow":"manageBorrow",
+    "BorrowList":"BorrowList",
+    "addBorrow":"addBorrow"
+  }
+}
