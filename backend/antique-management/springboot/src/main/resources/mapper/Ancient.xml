@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springboot.mapper.AncientMapper">
+
+
+    <insert id="save">
+        insert into ancient(name,description,dynasty,address,category,no_number,state,photo,updatetime)
+        values (#{name},#{description},#{dynasty},#{address},#{category},#{noNumber},#{state},#{photo},#{updatetime})
+    </insert>
+
+    <update id="updateById">
+        update ancient set name = #{name}, description = #{description},dynasty = #{dynasty}, address = #{address},category = #{category}, no_number = #{noNumber},state = #{state}, photo = #{photo},
+                           updatetime = #{updatetime}  where id = #{id}
+    </update>
+
+    <update id="update">
+        update ancient set name = #{name}, description = #{description},dynasty = #{dynasty}, address = #{address},category = #{category}, no_number = #{noNumber},state = #{state}, photo = #{photo},
+                           updatetime = #{updatetime}  where no_number = #{noNumber}
+    </update>
+
+
+    <delete id="deleteById">
+        delete from ancient where id = #{id}
+    </delete>
+
+    <select id="list" resultType="com.example.springboot.entity.Ancient">
+        select * from ancient order by id desc
+    </select>
+
+    <select id="listByCondition" resultType="com.example.springboot.entity.Ancient">
+        select * from ancient
+        <where>
+            <if test="name != null and name != ''">
+                name like concat('%', #{name}, '%')
+            </if>
+            <if test="noNumber != null and noNumber != ''">
+                and no_number = #{noNumber}
+            </if>
+        </where>
+    </select>
+
+    <select id="getById" resultType="com.example.springboot.entity.Ancient">
+        select * from ancient where id = #{id}
+    </select>
+
+
+    <select id="getByUsername" resultType="com.example.springboot.entity.Ancient">
+        select * from ancient where username = #{username}
+    </select>
+    <select id="getBynoNumber" resultType="com.example.springboot.entity.Ancient">
+        select * from ancient where no_number  = #{noNumber}
+    </select>
+</mapper>
